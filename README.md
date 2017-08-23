@@ -1,6 +1,6 @@
 # upload-configurator
 
-El plugin upload-configurator es un plugin diseñado para subir a nexus una libreria de After Sale
+El plugin upload-configurator es un plugin diseñado para subir a nexus una libreria de Android
 generando artifacts por cada build variant
 
 ## Como usarlo
