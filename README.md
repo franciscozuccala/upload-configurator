@@ -36,8 +36,7 @@ uploadConfigurator {
     pomName 'Nombre del modulo'
     pomDescription 'Descripcion del modulo'
     pomUrl 'Url de github comunmente'
-    developer 'me', 'me', 'me@mail.com'
-    developer 'other', 'other', 'other@mail.com'
+    developer 'id', 'name', 'dev@mail.com'
 
     if (necesitaAutenticacion) {
         repoAuth = authentication 'userName', 'password'
@@ -53,10 +52,10 @@ Ejemplo:
 buildscript{
     repositories {
         jcenter()
-        maven { url "${System.env.HOME}/.m2/repository" }
+        maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath 'com.github.franciscozuccala:upload-configurator:0.0.2-SNAPSHOT'
+        classpath 'com.github.franciscozuccala:upload-configurator:0.0.1'
     }
 }
 
@@ -66,6 +65,8 @@ uploadConfigurator {
     pomName 'My Module'
     pomDescription 'This is my module'
     pomUrl 'https://github.com/user/my-module'
+    developer 'me', 'me', 'me@mail.com'
+    developer 'other', 'other', 'other@mail.com'
 
     Boolean uploadLocal = project.hasProperty("UPLOAD_LOCAL") ? new Boolean(UPLOAD_LOCAL) : false
     def repoAuth = null
