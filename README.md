@@ -1,5 +1,7 @@
 # upload-configurator
 
+[![](https://jitpack.io/v/franciscozuccala/upload-configurator.svg)](https://jitpack.io/#franciscozuccala/upload-configurator)
+
 El plugin upload-configurator es un plugin diseñado para subir a nexus una libreria de Android
 generando artifacts por cada build variant
 
