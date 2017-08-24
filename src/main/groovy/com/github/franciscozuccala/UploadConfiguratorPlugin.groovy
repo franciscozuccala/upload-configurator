@@ -66,16 +66,13 @@ class UploadConfiguratorPlugin implements Plugin<Project> {
                         }
 
 //                      Generate poms for each artifact already generated
+                        println("Generating poms for each variant")
 
-//                      This allows to filter artifacts by variant name
                         variants.each {
+//                          This allows to filter artifacts by variant name
                             addFilter(it) { artifact, file ->
                                 artifact.name.contains(it)
                             }
-                        }
-
-                        println("Generating poms for each variant")
-                        variants.each {
 //                          This generate pom with variant name, like decolar-debug
                             def actualPom = pom(it)
                             actualPom.artifactId = "${project.rootProject.name}-$it"
