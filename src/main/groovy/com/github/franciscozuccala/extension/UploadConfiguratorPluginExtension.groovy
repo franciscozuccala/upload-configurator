@@ -3,6 +3,8 @@ package com.github.franciscozuccala.extension
 class UploadConfiguratorPluginExtension {
     String pomName
     String pomDescription
+    String pomArtifactId
+    String pomVersion
     String pomUrl
 
     Repository repository
