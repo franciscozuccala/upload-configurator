@@ -2,8 +2,10 @@
 
 [![](https://jitpack.io/v/franciscozuccala/upload-configurator.svg)](https://jitpack.io/#franciscozuccala/upload-configurator)
 
-El plugin upload-configurator es un plugin diseñado para subir a nexus una libreria de Android
+El plugin upload-variants-configurator es un plugin diseñado para subir a nexus una libreria de Android
 generando artifacts por cada build variant
+El plugin upload-configurator es un plugin que solamente se encarga de subir el artifact de una librería a nexus
+con sus sources
 
 ## Como usarlo
 
@@ -24,16 +26,20 @@ buildscript{
 }
 ```
 
-Luego aplicar el plugin:
+Luego aplicar alguno de los dos plugins:
 
 ```
 apply plugin: 'upload-configurator'
+
+apply plugin: 'upload-variants-configurator'
 ```
 
 Por ultimo la configuración del plugin:
 ```
 uploadConfigurator {
     pomName 'Nombre del modulo'
+    pomArtifactId 'artifact Id'
+    pomVersion 'version'
     pomDescription 'Descripcion del modulo'
     pomUrl 'Url de github comunmente'
     developer 'id', 'name', 'dev@mail.com'
@@ -59,10 +65,12 @@ buildscript{
     }
 }
 
-apply plugin: 'upload-configurator'
+apply plugin: 'upload-variants-configurator'
 
 uploadConfigurator {
     pomName 'My Module'
+    pomArtifactId 'artifact Id'
+    pomVersion 'version'
     pomDescription 'This is my module'
     pomUrl 'https://github.com/user/my-module'
     developer 'me', 'me', 'me@mail.com'
