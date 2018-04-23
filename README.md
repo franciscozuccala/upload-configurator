@@ -13,7 +13,7 @@ En el build.gradle del modulo que implemente el plugin agregar:
 
 El buildscript:
 
-```
+```gradle
 buildscript{
     repositories {
         ...
@@ -35,7 +35,7 @@ apply plugin: 'upload-variants-configurator'
 ```
 
 Por ultimo la configuración del plugin:
-```
+```gradle
 uploadConfigurator {
     pomName 'Nombre del modulo'
     pomArtifactId 'artifact Id'
@@ -54,7 +54,7 @@ uploadConfigurator {
 ```
 
 Ejemplo:
-```
+```gradle
 buildscript{
     repositories {
         jcenter()
